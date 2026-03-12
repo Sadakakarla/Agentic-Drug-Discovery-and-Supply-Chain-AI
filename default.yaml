@@ -1,0 +1,39 @@
+chem_kg:
+  neo4j_uri: "bolt://localhost:7687"
+  neo4j_user: "neo4j"
+  neo4j_password: "password"
+  vllm_base_url: "http://localhost:8000"
+
+supply_kg:
+  neo4j_uri: "bolt://localhost:7687"
+  neo4j_user: "neo4j"
+  neo4j_password: "password"
+
+drug_discovery:
+  vllm_base_url: "http://localhost:8000"
+  model_name: "meta-llama/Meta-Llama-3-8B-Instruct"
+  max_iterations: 10
+  sa_score_threshold: 4.0
+  temperature: 0.3
+  max_candidates: 20
+  rejection_sampling_rounds: 3
+
+forecasting:
+  graphsage:
+    node_feature_dim: 16
+    hidden_dim: 64
+    embedding_dim: 32
+  xgboost:
+    n_estimators: 200
+    max_depth: 6
+    lr: 0.05
+
+optimization:
+  n_vehicles: 5
+  vehicle_capacity: 500
+  depot_id: "central_warehouse"
+  time_limit_seconds: 30
+
+lead_selection:
+  max_leads: 10
+  sa_score_threshold: 4.0
