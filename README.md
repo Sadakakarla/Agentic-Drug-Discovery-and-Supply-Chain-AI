@@ -8,11 +8,12 @@
 
 Access to effective medicines and reliable healthcare supply chains are two of the most critical barriers to global health equity. This platform addresses both simultaneously through a unified AI system that shares knowledge graph infrastructure across two interconnected pipelines:
 
-**Pipeline 1 — Drug Discovery Lead Optimization:** 
+**Pipeline (i) — Drug Discovery Lead Optimization:** 
 
 A tool-augmented Llama-3-8B agent that autonomously optimizes molecular lead compounds for disease targets, enforcing lab-feasibility through RDKit property checks and synthetic accessibility thresholds, with multi-hop reasoning over a 50K-node chemical-protein knowledge graph.
 
-**Pipeline 2 — Healthcare Supply Chain Decision Support:** 
+**Pipeline (ii) — Healthcare Supply Chain Decision Support:** 
+
 A real-time decision system that forecasts zone-level stockout risk using GraphSAGE + XGBoost over facility-network signals, detects inventory anomalies via a Neo4j knowledge graph built from 4K+ requisition logs, and generates optimal rerouting plans using OR-Tools VRP under simulated demand spikes.
 
 ---
