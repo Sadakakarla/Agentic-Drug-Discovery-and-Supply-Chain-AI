@@ -1,4 +1,4 @@
-# UN SDG-3 AI Platform — Drug Discovery & Healthcare Supply Chain
+# UN SDG-3 — Drug Discovery & Healthcare Supply Chain
 
 > An end-to-end AI platform for UN Sustainable Development Goal 3 (Good Health and Well-Being), combining autonomous drug discovery lead optimization with intelligent healthcare supply chain decision support — built as a Millennium Fellow initiative under United Nations Academic Impact.
 
