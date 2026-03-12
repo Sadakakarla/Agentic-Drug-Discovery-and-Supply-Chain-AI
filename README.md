@@ -71,13 +71,11 @@ This platform automates both workflows end-to-end: the drug discovery agent uses
 
 ## Key Technical Decisions
 
-**Why combine drug discovery and supply chain in one platform?** Both pipelines share the same Neo4j knowledge graph infrastructure, DeBERTa entity linking, and SageMaker deployment — consolidating them reduces infrastructure cost and creates a more compelling end-to-end demonstration of AI for global health.
+**plan-and-verify for drug discovery: Unconstrained LLM generation produces high rates of chemically invalid SMILES. The plan-and-verify loop — combined with rejection sampling across 3 rounds — filters invalid candidates before they consume synthesis resources, cutting invalid SMILES by 28%.
 
-**Why plan-and-verify for drug discovery?** Unconstrained LLM generation produces high rates of chemically invalid SMILES. The plan-and-verify loop — combined with rejection sampling across 3 rounds — filters invalid candidates before they consume synthesis resources, cutting invalid SMILES by 28%.
+**GraphSAGE + XGBoost over ARIMA for stockout forecasting:** ARIMA models time series independently per facility and cannot capture network effects — a stockout at a distributor affects 12 downstream clinics simultaneously. GraphSAGE embeds each facility in the context of its supply network neighborhood before XGBoost classification, improving surge-window RMSE by 18%.
 
-**Why GraphSAGE + XGBoost over ARIMA for stockout forecasting?** ARIMA models time series independently per facility and cannot capture network effects — a stockout at a distributor affects 12 downstream clinics simultaneously. GraphSAGE embeds each facility in the context of its supply network neighborhood before XGBoost classification, improving surge-window RMSE by 18%.
-
-**Why OR-Tools for rerouting?** OR-Tools CP-SAT/VRP provides provably optimal or near-optimal routing solutions with hard time-window constraints, unlike heuristic approaches that may violate critical delivery windows for high-priority facilities.
+**OR-Tools for rerouting** OR-Tools CP-SAT/VRP provides provably optimal or near-optimal routing solutions with hard time-window constraints, unlike heuristic approaches that may violate critical delivery windows for high-priority facilities.
 
 ---
 
